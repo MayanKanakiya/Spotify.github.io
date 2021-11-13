@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Mochiy+Pop+One&family=Secular+One&display=swap');
+body{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+    font-family: 'Aclonica', sans-serif;
+    background-color: aliceblue;
+    /* overflow: hidden; */
+}
+.navbar-brand{
+    margin-right: 10px;
+}
+.musicContainer {
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .ContainerAnimate{
+    animation: animatiBgContainer 10s infinite;
+  }
+  /* bg_music container animation */
+  @keyframes animatiBgContainer {
+    0%{
+      background-color: lightcyan;
+      border: 2px solid lightblue;
+      box-shadow: 5px 5px 5px lightgray;
+    }
+    25%{
+        background-color: lightgreen;
+      border: 3px solid lightcyan;
+      box-shadow: 5px 5px 5px lightgray;
+    }
+    50%{
+        background-color: lightpink;
+      border: 3px solid red;
+      box-shadow: 5px 5px 5px lightgray;
+    }
+    75%{
+        background-color: lightseagreen;
+      border: 2px solid lightpink;
+      box-shadow: 5px 5px 5px lightgray;
+    }
+    100%{
+        background-color: lightyellow;
+      border: 3px solid lightgreen;
+      box-shadow: 5px 5px 5px lightgray;
+    }
+    
+  }
+
+  .img-fluid {
+    padding: 30px 0px 30px 0px;
+  }
+
+  .footermenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px 30px 0px;
+    padding-top:26px;
+    position: relative;
+    bottom: 0;
+  }
+  .MusicControlicon {
+    cursor: pointer;
+  }
+
+  #ProgressBar {
+    cursor: pointer;
+    width: 80vw;
+  }
+  .songItem {
+    padding: 5px 0px 5px 0px;
+  }
+
+  .dropDownMenuWidth {
+    width: 304%;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: start;
+  }
+
+  .songName {
+    padding-left: 5px;
+  }
+  #bg_img {
+    border-radius: 85px;
+  }
+
+  .musicNameContainer {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

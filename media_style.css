@@ -1,0 +1,16 @@
+@media screen and (max-width: 991px) {
+
+    .dropDownMenuWidth {
+        width: 100% !important;
+      }
+      .musicNameContainer{
+        min-height: 169px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn {
+        display: flex;
+        justify-content: start;
+      }
+}
