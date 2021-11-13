@@ -6,37 +6,37 @@ let musicContainer = document.getElementById('musicContainer');
 let MasterSongName = document.getElementById('MasterSongName');
 let bg_img = document.getElementById('bg_img');
 let songItem = Array.from(document.getElementsByClassName('songItem'));
-let audioElement = new Audio('Music/1.mp3');
+let audioElement = new Audio('1.mp3');
 
 
 let songs = [
-    { songName: "Baarish Ban Jaana - Payal Dev", filePath: "Music/1.mp3", coverPath: "image/bg_img.webp" },
+    { songName: "Baarish Ban Jaana - Payal Dev", filePath: "1.mp3", coverPath: "bg_img.webp" },
 
-    { songName: "Dil Ko Karaar Aaya - Neha Kakkar", filePath: "Music/2.mp3", coverPath: "image/bg_img2.webp" },
+    { songName: "Dil Ko Karaar Aaya - Neha Kakkar", filePath: "2.mp3", coverPath: "bg_img2.webp" },
 
-    { songName: "02 Laila - Notebook", filePath: "Music/3.mp3", coverPath: "image/bg_img3.webp" },
+    { songName: "02 Laila - Notebook", filePath: "3.mp3", coverPath: "bg_img3.webp" },
 
-    { songName: "Lut Gaye - Jubin Nautiyal", filePath: "Music/4.mp3", coverPath: "image/bg_img4.webp" },
+    { songName: "Lut Gaye - Jubin Nautiyal", filePath: "4.mp3", coverPath: "bg_img4.webp" },
 
-    { songName: "Mann Bharya - Shershaah", filePath: "Music/5.mp3", coverPath: "image/bg_img5.webp" },
+    { songName: "Mann Bharya - Shershaah", filePath: "5.mp3", coverPath: "bg_img5.webp" },
 
-    { songName: "Nachi_Nachi", filePath: "Music/6.mp3", coverPath: "image/bg_img6.webp" },
+    { songName: "Nachi_Nachi", filePath: "6.mp3", coverPath: "bg_img6.webp" },
 
-    { songName: "O Yaara Dil Lagaana - Sanak", filePath: "Music/7.mp3", coverPath: "image/bg_img7.jpg" },
+    { songName: "O Yaara Dil Lagaana - Sanak", filePath: "7.mp3", coverPath: "bg_img7.jpg" },
 
-    { songName: "Raataan Lambiyan - Shershaah", filePath: "Music/8.mp3", coverPath: "image/bg_img8.jpg" },
+    { songName: "Raataan Lambiyan - Shershaah", filePath: "8.mp3", coverPath: "bg_img8.jpg" },
 
-    { songName: "Ranjha - Shershaah", filePath: "Music/9.mp3", coverPath: "image/bg_img9.jpg" },
+    { songName: "Ranjha - Shershaah", filePath: "9.mp3", coverPath: "bg_img9.jpg" },
 
-    { songName: "Shona Shona - Tony Kakkar", filePath: "Music/10.mp3", coverPath: "image/bg_img10.jpg" },
+    { songName: "Shona Shona - Tony Kakkar", filePath: "10.mp3", coverPath: "bg_img10.jpg" },
 
-    { songName: "Suna Hai - Sanak ", filePath: "Music/11.mp3", coverPath: "image/bg_img3.webp" },
+    { songName: "Suna Hai - Sanak ", filePath: "11.mp3", coverPath: "bg_img3.webp" },
 
-    { songName: "Thoda_Thoda_Pyaar", filePath: "Music/12.mp3", coverPath: "image/bg_img6.webp" },
+    { songName: "Thoda_Thoda_Pyaar", filePath: "12.mp3", coverPath: "bg_img6.webp" },
 
-    { songName: "Toh Aagaye Hum - Jubin Nautiyal", filePath: "Music/13.mp3", coverPath: "image/bg_img2.webp" },
+    { songName: "Toh Aagaye Hum - Jubin Nautiyal", filePath: "13.mp3", coverPath: "bg_img2.webp" },
 
-    { songName: "Barsaat Ki Dhun - Jubin Nautiyal", filePath: "Music/14.mp3", coverPath: "image/bg_img4.webp" },
+    { songName: "Barsaat Ki Dhun - Jubin Nautiyal", filePath: "14.mp3", coverPath: "bg_img4.webp" },
 ]
 // Adding of music list drop down menu
 songItem.forEach((element, i) => {
@@ -49,7 +49,7 @@ songItem.forEach((element, i) => {
 Array.from(document.getElementsByClassName('songName')).forEach((element1, i) => {
     element1.addEventListener('click', (e) => {
         songIndex = parseInt(e.target.id);
-        audioElement.src = `Music/${songIndex}.mp3`;
+        audioElement.src = `${songIndex}.mp3`;
         bg_img.src = songs[songIndex - 1].coverPath;
         MasterSongName.innerText = songs[i].songName;
         audioElement.currentTime = 0;
@@ -78,7 +78,7 @@ function nextBtnFun() {
     } else {
         songIndex += 1;
     }
-    audioElement.src = `Music/${(songIndex + 1) % songs.length}.mp3`;
+    audioElement.src = `${(songIndex + 1) % songs.length}.mp3`;
     bg_img.src = songs[songIndex].coverPath;
     MasterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
@@ -94,7 +94,7 @@ function previousBtnFun() {
         songIndex -= 1;
     }
     // (songIndex  - 1 + songs.length) % songs.length
-    audioElement.src = `Music/${songIndex + 1}.mp3`;
+    audioElement.src = `${songIndex + 1}.mp3`;
     bg_img.src = songs[songIndex].coverPath;
     MasterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
